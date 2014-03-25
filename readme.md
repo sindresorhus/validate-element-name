@@ -2,6 +2,8 @@
 
 > Validate the name of a [custom element](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
 
+Custom element names should start with `a-z` and contain `a-z` and at least one `-` with optionally `0-9`.
+
 
 ## Install
 

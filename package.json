@@ -34,6 +34,9 @@
     "web",
     "components"
   ],
+  "dependencies": {
+    "ncname": "^0.1.0"
+  },
   "devDependencies": {
     "mocha": "*"
   }

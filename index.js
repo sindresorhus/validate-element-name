@@ -1,4 +1,5 @@
 'use strict';
+var ncname = require('ncname');
 
 var reservedNames = [
 	'annotation-xml',
@@ -18,6 +19,19 @@ module.exports = function (name) {
 
 	if (name.indexOf('-') === -1) {
 		throw new Error('Custom element names must contain a hyphen. Example: unicorn-cake');
+	}
+
+	if (/^\d/i.test(name)) {
+		throw new Error('Custom element names must not start with a digit');
+	}
+
+	if (/^-/i.test(name)) {
+		throw new Error('Custom element names must not start with a hyphen');
+	}
+
+	// http://www.w3.org/TR/custom-elements/#concepts
+	if (!ncname.test(name.replace(/-/g, ''))) {
+		throw new Error('Invalid element name.');
 	}
 
 	if (reservedNames.indexOf(name) !== -1) {
