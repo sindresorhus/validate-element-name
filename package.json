@@ -1,0 +1,40 @@
+{
+  "name": "validate-element-name",
+  "version": "0.0.0",
+  "description": "Validate the name of a custom element",
+  "license": "MIT",
+  "repository": "sindresorhus/validate-element-name",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "validate",
+    "validator",
+    "check",
+    "custom",
+    "element",
+    "elements",
+    "elem",
+    "el",
+    "html",
+    "tag",
+    "name",
+    "wc",
+    "web",
+    "components"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
