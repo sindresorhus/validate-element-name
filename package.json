@@ -4,6 +4,9 @@
   "description": "Validate the name of a custom element",
   "license": "MIT",
   "repository": "sindresorhus/validate-element-name",
+  "bin": {
+    "validate-element-name": "cli.js"
+  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -16,9 +19,13 @@
     "test": "mocha"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "keywords": [
+    "cli",
+    "bin",
+    "app",
     "validate",
     "validator",
     "check",

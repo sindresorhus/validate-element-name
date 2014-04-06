@@ -22,11 +22,11 @@ module.exports = function (name) {
 	}
 
 	if (/^polymer-/.test(name)) {
-		throw new Error('Custom element names should not start with `polymer-`. See: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
+		throw new Error('Custom element names should not start with `polymer-`.\nSee: http://webcomponents.github.io/articles/how-should-i-name-my-element');
 	}
 
 	if (/^x-/.test(name)) {
-		throw new Error('Custom element names should not start with `x-`. See: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
+		throw new Error('Custom element names should not start with `x-`.\nSee: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
 	}
 
 	if (/^\d/i.test(name)) {
@@ -43,7 +43,7 @@ module.exports = function (name) {
 	}
 
 	if (reservedNames.indexOf(name) !== -1) {
-		throw new Error('The supplied element name is reserved and can\'t be used. See: http://www.w3.org/TR/custom-elements/#concepts');
+		throw new Error('The supplied element name is reserved and can\'t be used.\nSee: http://www.w3.org/TR/custom-elements/#concepts');
 	}
 
 	return true;
