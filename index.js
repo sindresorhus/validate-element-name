@@ -29,6 +29,10 @@ module.exports = function (name) {
 		throw new Error('Custom element names should not start with `x-`.\nSee: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
 	}
 
+	if (/^ng-/.test(name)) {
+		throw new Error('Custom element names should not start with `ng-`.\nSee: http://docs.angularjs.org/guide/directive#creating-directives');
+	}
+
 	if (/^\d/i.test(name)) {
 		throw new Error('Custom element names must not start with a digit');
 	}
