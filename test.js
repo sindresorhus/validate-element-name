@@ -38,4 +38,12 @@ it('should validate Custom Element names', function () {
 	assert.doesNotThrow(function () {
 		validate('não-tém');
 	});
+
+	assert.throws(function () {
+		validate('polymer-');
+	});
+
+	assert.throws(function () {
+		validate('x-');
+	});
 });

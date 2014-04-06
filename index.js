@@ -21,6 +21,14 @@ module.exports = function (name) {
 		throw new Error('Custom element names must contain a hyphen. Example: unicorn-cake');
 	}
 
+	if (/^polymer-/.test(name)) {
+		throw new Error('Custom element names should not start with `polymer-`. See: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
+	}
+
+	if (/^x-/.test(name)) {
+		throw new Error('Custom element names should not start with `x-`. See: http://webcomponents.github.io/articles/how-should-i-name-my-element/');
+	}
+
 	if (/^\d/i.test(name)) {
 		throw new Error('Custom element names must not start with a digit');
 	}
