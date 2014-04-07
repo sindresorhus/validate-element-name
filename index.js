@@ -42,7 +42,7 @@ module.exports = function (name) {
 	}
 
 	// http://www.w3.org/TR/custom-elements/#concepts
-	if (!ncname.test(name.replace(/-/g, ''))) {
+	if (!ncname.test(name)) {
 		throw new Error('Invalid element name.');
 	}
 

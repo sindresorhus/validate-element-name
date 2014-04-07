@@ -50,4 +50,8 @@ it('should validate Custom Element names', function () {
 	assert.throws(function () {
 		validate('ng-');
 	});
+
+	assert.throws(function () {
+		validate('foo-/');
+	});
 });
