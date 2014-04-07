@@ -25,9 +25,14 @@ if (process.argv.indexOf('-v') !== -1 || process.argv.indexOf('--version') !== -
 	return;
 }
 
-try {
-	validate(input);
-	console.log('Valid element name 👍');
-} catch (err) {
-	console.error(err.message);
+var res = validate(input);
+
+if (res.isValid) {
+	console.log('👍  Valid element name');
+
+	if (res.message) {
+		console.log('\nWarning:\n' + res.message);
+	}
+} else {
+	console.error('👎  Invalid element name\n\n' + res.message);
 }

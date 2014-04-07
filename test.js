@@ -2,60 +2,34 @@
 var assert = require('assert');
 var validate = require('./index');
 
-it('should validate Custom Element names', function () {
-	assert.throws(function () {
-		validate('');
-	});
+it('should return false for `isValid` and with a `message` for invalid names', function () {
+	assert(!validate('').isValid);
+	assert(!validate('foo').isValid);
+	assert(!validate('annotation-xml').isValid);
+	assert(!validate('0-foo').isValid);
+	assert(!validate('-foo').isValid);
+	assert(!validate('foo-$').isValid);
+	assert(!validate('foo-/').isValid);
+	assert(!validate('foo/').isValid);
+	assert(validate('foo/').message);
+});
 
-	assert.throws(function () {
-		validate('foo');
-	});
+it('should return true for `isValid` and without `message` for valid names', function () {
+	assert(validate('foo-bar').isValid);
+	assert(!validate('foo-bar').message);
+	assert(validate('FOO-BAR').isValid);
+	assert(validate('não-tém').isValid);
+});
 
-	assert.throws(function () {
-		validate('annotation-xml');
-	});
-
-	assert.throws(function () {
-		validate('0-foo');
-	});
-
-	assert.throws(function () {
-		validate('-foo');
-	});
-
-	assert.throws(function () {
-		validate('foo-$');
-	});
-
-	assert.doesNotThrow(function () {
-		validate('foo-bar');
-	});
-
-	assert.doesNotThrow(function () {
-		validate('FOO-BAR');
-	});
-
-	assert.doesNotThrow(function () {
-		validate('não-tém');
-	});
-
-	assert.throws(function () {
-		validate('polymer-');
-	});
-
-	assert.throws(function () {
-		validate('x-');
-	});
-
-	assert.throws(function () {
-		validate('ng-');
-	});
-
-	assert.throws(function () {
-		validate('foo-/');
-	});
-
-	assert.throws(function () {
-		validate('foo/');
-	});
+it('should return true for `isValid` with warnings for not recommended names', function () {
+	assert(validate('polymer-').isValid);
+	assert(validate('polymer-').message);
+	assert(validate('x-').isValid);
+	assert(validate('ng-').isValid);
+	assert(validate('unicorn-').isValid);
+	assert(validate('unicorn-').message);
+	assert(validate('unicorn-ø').message);
+	assert(validate('uni--corn').message);
+	assert(validate('uni-----corn').message);
+	assert(validate('uni-co___rn').message);
 });

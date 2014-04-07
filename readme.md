@@ -18,15 +18,11 @@ $ npm install --save validate-element-name
 ```js
 var validate = require('validate-element-name');
 
-try {
-	validate('unicorn');
-} catch (err) {
-	console.log(err.message);
-	//=> 'Custom element names must contain a hyphen. Example: unicorn-cake'
-}
+validate('unicorn');
+//=> {isValid: false, message: 'Custom element names must contain a hyphen. Example: unicorn-cake'}
 ```
 
-Throws an error if the custom element name is invalid.
+See [cli.js](cli.js) for real-world usage.
 
 
 ## CLI
@@ -47,7 +43,7 @@ Usage
 
 Example
   $ validate-element-name s-slider
-  Valid element name 👍
+  👍  Valid element name
 ```
 
 
