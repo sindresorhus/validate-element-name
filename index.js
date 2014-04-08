@@ -56,7 +56,7 @@ function hasWarning(name) {
 		return 'Custom element names should not end with an hyphen.';
 	}
 
-	if (/[^\x20-\x7E]+/.test(name)) {
+	if (/[^\x20-\x7E]/.test(name)) {
 		return 'Custom element names should not contain non-ASCII characters.';
 	}
 
