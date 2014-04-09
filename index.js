@@ -52,6 +52,10 @@ function hasWarning(name) {
 		return 'Custom element names should not start with `ng-`.\nSee: http://docs.angularjs.org/guide/directive#creating-directives';
 	}
 
+	if (/^[^a-z]/i.test(name)) {
+		return 'This element name is only valid in XHTML, not in HTML. First character should be in the range a-z.';
+	}
+
 	if (/-$/.test(name)) {
 		return 'Custom element names should not end with an hyphen.';
 	}
