@@ -40,15 +40,15 @@ function hasError(name) {
 };
 
 function hasWarning(name) {
-	if (/^polymer-/.test(name)) {
+	if (/^polymer-/i.test(name)) {
 		return 'Custom element names should not start with `polymer-`.\nSee: http://webcomponents.github.io/articles/how-should-i-name-my-element';
 	}
 
-	if (/^x-/.test(name)) {
+	if (/^x-/i.test(name)) {
 		return 'Custom element names should not start with `x-`.\nSee: http://webcomponents.github.io/articles/how-should-i-name-my-element/';
 	}
 
-	if (/^ng-/.test(name)) {
+	if (/^ng-/i.test(name)) {
 		return 'Custom element names should not start with `ng-`.\nSee: http://docs.angularjs.org/guide/directive#creating-directives';
 	}
 
@@ -72,7 +72,7 @@ function hasWarning(name) {
 		return 'Custom element names should not contain consecutive hyphens.';
 	}
 
-	if (/[^a-z0-9]{2}/.test(name)) {
+	if (/[^a-z0-9]{2}/i.test(name)) {
 		return 'Custom element names should not contain consecutive non-alpha characters.';
 	}
 }

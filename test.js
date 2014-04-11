@@ -19,6 +19,8 @@ it('should return true for `isValid` and without `message` for valid names', fun
 	assert(!validate('foo-bar').message);
 	assert(validate('FOO-BAR').isValid);
 	assert(validate('não-tém').isValid);
+	assert(validate('a-aAA'));
+	assert(validate('a-A'));
 });
 
 it('should return true for `isValid` with warnings for not recommended names', function () {
