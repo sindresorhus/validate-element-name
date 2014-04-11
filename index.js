@@ -60,6 +60,10 @@ function hasWarning(name) {
 		return 'Custom element names should not end with an hyphen.';
 	}
 
+	if (/[\.]/.test(name)) {
+		return 'Custom element names should not contain a dot character as it would need to be escaped in a CSS selector.';
+	}
+
 	if (/[^\x20-\x7E]/.test(name)) {
 		return 'Custom element names should not contain non-ASCII characters.';
 	}
