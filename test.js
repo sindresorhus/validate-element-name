@@ -38,4 +38,6 @@ it('should return true for `isValid` with warnings for not recommended names', f
 	assert(validate('øl-unicorn').message);
 	assert(validate('uni-co.rn').isValid);
 	assert(validate('uni-co.rn').message);
+	assert(validate('uni-corné').isValid);
+	assert(validate('uni-corné').message);
 });
