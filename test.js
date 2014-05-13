@@ -10,6 +10,7 @@ it('should return false for `isValid` and with a `message` for invalid names', f
 	assert(!validate('-foo').isValid);
 	assert(!validate('foo-$').isValid);
 	assert(!validate('foo-/').isValid);
+	assert(!validate('FOO-BAR').isValid);
 	assert(!validate('foo/').isValid);
 	assert(validate('foo/').message);
 });
@@ -17,7 +18,6 @@ it('should return false for `isValid` and with a `message` for invalid names', f
 it('should return true for `isValid` and without `message` for valid names', function () {
 	assert(validate('foo-bar').isValid);
 	assert(!validate('foo-bar').message);
-	assert(validate('FOO-BAR').isValid);
 	assert(validate('não-tém').isValid);
 	assert(validate('a-aAA'));
 	assert(validate('a-A'));
@@ -42,6 +42,4 @@ it('should return true for `isValid` with warnings for not recommended names', f
 	assert(validate('uni-corné').message);
 	assert(validate('xml-unicorn').isValid);
 	assert(validate('xml-unicorn').message);
-	assert(validate('UNI-corn').isValid);
-	assert(validate('UNI-corn').message);
 });
