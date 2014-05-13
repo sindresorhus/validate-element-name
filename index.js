@@ -18,7 +18,7 @@ function hasError(name) {
 	}
 
 	if (name.toLowerCase() !== name) {
-		return 'Custom element names should be lowercase.';
+		return 'Custom element names must be lowercase.';
 	}
 
 	if (name.indexOf('-') === -1) {
