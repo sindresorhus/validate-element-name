@@ -19,6 +19,7 @@ it('should return true for `isValid` and without `message` for valid names', fun
 	assert(validate('foo-bar').isValid);
 	assert(!validate('foo-bar').message);
 	assert(validate('não-tém').isValid);
+	assert(validate('foo-bÅr').isValid);
 	assert(validate('a-aAA'));
 	assert(validate('a-A'));
 });
