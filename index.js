@@ -41,7 +41,7 @@ function hasError(name) {
 	if (reservedNames.indexOf(name) !== -1) {
 		return 'The supplied element name is reserved and can\'t be used.\nSee: http://www.w3.org/TR/custom-elements/#concepts';
 	}
-};
+}
 
 function hasWarning(name) {
 	if (/^polymer-/i.test(name)) {

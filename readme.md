@@ -8,7 +8,7 @@ You should not use the [`x-`, `polymer-`](http://webcomponents.github.io/article
 
 ## Install
 
-```bash
+```sh
 $ npm install --save validate-element-name
 ```
 
@@ -27,26 +27,22 @@ See [cli.js](cli.js) for real-world usage.
 
 ## CLI
 
-You can also use it as a CLI app by installing it globally:
-
-```bash
+```sh
 $ npm install --global validate-element-name
 ```
 
-#### Usage
-
-```bash
+```sh
 $ validate-element-name --help
 
-Usage
-  $ validate-element-name <element-name>
+  Usage
+    validate-element-name <element-name>
 
-Example
-  $ validate-element-name s-slider
-  👍  Valid element name
+  Example
+    validate-element-name s-slider
+    ✔︎ Valid element name.
 ```
 
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)

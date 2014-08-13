@@ -4,13 +4,13 @@
   "description": "Validate the name of a custom element",
   "license": "MIT",
   "repository": "sindresorhus/validate-element-name",
-  "bin": {
-    "validate-element-name": "cli.js"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "validate-element-name": "cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -42,7 +42,8 @@
     "components"
   ],
   "dependencies": {
-    "ncname": "^0.1.0"
+    "log-symbols": "^1.0.0",
+    "ncname": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"

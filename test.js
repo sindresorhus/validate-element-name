@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var validate = require('./index');
+var validate = require('./');
 
 it('should return false for `isValid` and with a `message` for invalid names', function () {
 	assert(!validate('').isValid);
