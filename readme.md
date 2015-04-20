@@ -2,13 +2,14 @@
 
 > Validate the name of a [custom element](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
 
-Custom element names should start with `a-z` and contain `a-z` and at least one `-` with optionally `0-9`.  
+Custom element names should start with `a-z` and contain `a-z` and at least one `-` with optionally `0-9`.
+
 You should not use the [`x-`, `polymer-`](http://webcomponents.github.io/articles/how-should-i-name-my-element/), [`ng-`](http://docs.angularjs.org/guide/directive#creating-directives) prefixes.
 
 
 ## Install
 
-```sh
+```
 $ npm install --save validate-element-name
 ```
 
@@ -27,11 +28,11 @@ See [cli.js](cli.js) for real-world usage.
 
 ## CLI
 
-```sh
+```
 $ npm install --global validate-element-name
 ```
 
-```sh
+```
 $ validate-element-name --help
 
   Usage
