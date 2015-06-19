@@ -36,10 +36,10 @@ $ npm install --global validate-element-name
 $ validate-element-name --help
 
   Usage
-    validate-element-name <element-name>
+    $ validate-element-name <element-name>
 
   Example
-    validate-element-name s-slider
+    $ validate-element-name s-slider
     ✔︎ Valid element name.
 ```
 

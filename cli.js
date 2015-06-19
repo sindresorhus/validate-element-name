@@ -1,36 +1,26 @@
 #!/usr/bin/env node
 'use strict';
 var logSymbols = require('log-symbols');
-var pkg = require('./package.json');
+var meow = require('meow');
 var validate = require('./');
-var argv = process.argv.slice(2);
-var input = argv[0];
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  $ validate-element-name <element-name>',
 		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    validate-element-name <element-name>',
-		'',
-		'  Example',
-		'    validate-element-name s-slider',
-		'    ' + logSymbols.success + ' Valid element name.'
-	].join('\n'));
+		'Example',
+		'  $ validate-element-name s-slider',
+		'  ' + logSymbols.success + ' Valid element name.'
+	]
+});
+
+if (cli.input.length === 0) {
+	console.error('Expected a element name');
+	process.exit(1);
 }
 
-if (!input || argv.indexOf('--help') !== -1) {
-	help();
-	return;
-}
-
-if (argv.indexOf('--version') !== -1) {
-	console.log(pkg.version);
-	return;
-}
-
-var res = validate(input);
+var res = validate(cli.input[0]);
 
 if (res.isValid) {
 	if (res.message) {
