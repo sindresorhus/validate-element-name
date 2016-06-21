@@ -4,19 +4,17 @@ var logSymbols = require('log-symbols');
 var meow = require('meow');
 var validate = require('./');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ validate-element-name <element-name>',
-		'',
-		'Example',
-		'  $ validate-element-name s-slider',
-		'  ' + logSymbols.success + ' Valid element name.'
-	]
-});
+var cli = meow([
+	'Usage',
+	'  $ validate-element-name <element-name>',
+	'',
+	'Example',
+	'  $ validate-element-name s-slider',
+	'  ' + logSymbols.success + ' Valid element name.'
+]);
 
 if (cli.input.length === 0) {
-	console.error('Expected a element name');
+	console.error('Specify an element name');
 	process.exit(1);
 }
 

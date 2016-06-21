@@ -14,7 +14,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -23,8 +23,6 @@
   "keywords": [
     "cli-app",
     "cli",
-    "bin",
-    "app",
     "validate",
     "validator",
     "check",
@@ -43,9 +41,10 @@
   "dependencies": {
     "is-potential-custom-element-name": "^1.0.0",
     "log-symbols": "^1.0.0",
-    "meow": "^3.3.0"
+    "meow": "^3.7.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }

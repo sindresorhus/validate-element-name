@@ -17,7 +17,7 @@ $ npm install --save validate-element-name
 ## Usage
 
 ```js
-var validate = require('validate-element-name');
+const validate = require('validate-element-name');
 
 validate('unicorn');
 //=> {isValid: false, message: 'Custom element names must contain a hyphen. Example: unicorn-cake'}
@@ -46,4 +46,4 @@ $ validate-element-name --help
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
