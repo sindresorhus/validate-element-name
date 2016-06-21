@@ -41,9 +41,9 @@
     "components"
   ],
   "dependencies": {
+    "is-potential-custom-element-name": "^1.0.0",
     "log-symbols": "^1.0.0",
-    "meow": "^3.3.0",
-    "ncname": "^1.0.0"
+    "meow": "^3.3.0"
   },
   "devDependencies": {
     "mocha": "*"
