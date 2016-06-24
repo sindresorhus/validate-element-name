@@ -65,8 +65,8 @@ function hasWarning(name) {
 		return 'This element name is only valid in XHTML, not in HTML. First character should be in the range a-z.';
 	}
 
-	if (/[^a-z0-9]$/i.test(name)) {
-		return 'Custom element names should not end with a non-alpha character.';
+	if (/-$/.test(name)) {
+		return 'Custom element names should not end with an hyphen.';
 	}
 
 	if (/[\.]/.test(name)) {
