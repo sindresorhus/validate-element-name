@@ -66,7 +66,7 @@ function hasWarning(name) {
 	}
 
 	if (/-$/.test(name)) {
-		return 'Custom element names should not end with an hyphen.';
+		return 'Custom element names should not end with a hyphen.';
 	}
 
 	if (/[\.]/.test(name)) {
