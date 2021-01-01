@@ -1,4 +1,4 @@
-# validate-element-name [![Build Status](https://travis-ci.org/sindresorhus/validate-element-name.svg?branch=master)](https://travis-ci.org/sindresorhus/validate-element-name)
+# validate-element-name
 
 > Validate the name of a [custom element](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
 
