@@ -1,6 +1,6 @@
 {
 	"name": "validate-element-name",
-	"version": "2.1.1",
+	"version": "3.0.0",
 	"description": "Validate the name of a custom element",
 	"license": "MIT",
 	"repository": "sindresorhus/validate-element-name",
