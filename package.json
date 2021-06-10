@@ -7,11 +7,13 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com/"
   },
   "bin": "cli.js",
+  "type": "module",
+  "exports": "./index.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=12"
   },
   "scripts": {
     "test": "xo && ava"
@@ -39,12 +41,12 @@
     "components"
   ],
   "dependencies": {
-    "is-potential-custom-element-name": "^1.0.0",
-    "log-symbols": "^1.0.0",
-    "meow": "^3.7.0"
+    "is-potential-custom-element-name": "^1.0.1",
+    "log-symbols": "^5.0.0",
+    "meow": "^10.0.1"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "^3.15.0",
+    "xo": "^0.40.2"
   }
 }

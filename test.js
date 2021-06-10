@@ -1,7 +1,7 @@
 import test from 'ava';
-import m from './';
+import m from './index.js';
 
-test('returns false for `isValid` and with a `message` for invalid names', t => {
+test('returns false for `isValid` and with a `message` for invalid names', (t) => {
 	t.false(m('').isValid);
 	t.false(m('foo').isValid);
 	t.false(m('annotation-xml').isValid);
@@ -14,14 +14,14 @@ test('returns false for `isValid` and with a `message` for invalid names', t => 
 	t.truthy(m('foo/').message);
 });
 
-test('returns true for `isValid` and without `message` for valid names', t => {
+test('returns true for `isValid` and without `message` for valid names', (t) => {
 	t.true(m('foo-bar').isValid);
 	t.falsy(m('foo-bar').message);
 	t.true(m('não-tém').isValid);
 	t.true(m('foo-bÅr').isValid);
 });
 
-test('returns true for `isValid` with warnings for not recommended names', t => {
+test('returns true for `isValid` with warnings for not recommended names', (t) => {
 	t.true(m('polymer-').isValid);
 	t.truthy(m('polymer-').message);
 	t.true(m('x-').isValid);

@@ -6,13 +6,11 @@ Custom element names should start with `a-z` and contain `a-z` and at least one 
 
 You should not use the [`x-`, `polymer-`](http://webcomponents.github.io/articles/how-should-i-name-my-element/), [`ng-`](http://docs.angularjs.org/guide/directive#creating-directives) prefixes.
 
-
 ## Install
 
 ```
 $ npm install --save validate-element-name
 ```
-
 
 ## Usage
 
@@ -24,7 +22,6 @@ validate('unicorn');
 ```
 
 See [cli.js](cli.js) for real-world usage.
-
 
 ## CLI
 
@@ -42,7 +39,6 @@ $ validate-element-name --help
     $ validate-element-name s-slider
     ✔︎ Valid element name.
 ```
-
 
 ## License
 
