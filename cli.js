@@ -1,32 +1,33 @@
 #!/usr/bin/env node
-'use strict';
-var logSymbols = require('log-symbols');
-var meow = require('meow');
-var validate = require('./');
+import logSymbols from 'log-symbols';
+import meow from 'meow';
+import validate from './index.js';
 
-var cli = meow([
-	'Usage',
-	'  $ validate-element-name <element-name>',
-	'',
-	'Example',
-	'  $ validate-element-name s-slider',
-	'  ' + logSymbols.success + ' Valid element name.'
-]);
+const cli = meow(`
+	Usage
+	  $ validate-element-name <element-name>
+
+	Example
+	  $ validate-element-name s-slider
+	  ${logSymbols.success} Valid element name
+`,
+	{ importMeta: import.meta }
+);
 
 if (cli.input.length === 0) {
 	console.error('Specify an element name');
 	process.exit(1);
 }
 
-var res = validate(cli.input[0]);
+const result = validate(cli.input[0]);
 
-if (res.isValid) {
-	if (res.message) {
+if (result.isValid) {
+	if (result.message) {
 		console.log(logSymbols.success + ' Valid element name, but...');
-		console.log(logSymbols.warning + ' ' + res.message);
+		console.log(logSymbols.warning + ' ' + result.message);
 	} else {
 		console.log(logSymbols.success + ' Valid element name.');
 	}
 } else {
-	console.error(logSymbols.error + ' ' + res.message);
+	console.error(logSymbols.error + ' ' + result.message);
 }
