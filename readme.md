@@ -9,13 +9,13 @@ You should not use the [`x-`, `polymer-`](http://webcomponents.github.io/article
 ## Install
 
 ```
-$ npm install --save validate-element-name
+$ npm install validate-element-name
 ```
 
 ## Usage
 
 ```js
-const validate = require('validate-element-name');
+import validateElementName from 'validate-element-name';
 
 validate('unicorn');
 //=> {isValid: false, message: 'Custom element names must contain a hyphen. Example: unicorn-cake'}
@@ -39,7 +39,3 @@ $ validate-element-name --help
     $ validate-element-name s-slider
     ✔︎ Valid element name.
 ```
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

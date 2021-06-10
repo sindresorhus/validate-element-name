@@ -9,7 +9,7 @@ const reservedNames = new Set([
 	'font-face-uri',
 	'font-face-format',
 	'font-face-name',
-	'missing-glyph',
+	'missing-glyph'
 ]);
 
 function hasError(name) {
@@ -39,7 +39,7 @@ function hasError(name) {
 	}
 
 	if (reservedNames.has(name)) {
-		return "The supplied element name is reserved and can't be used.\nSee: https://html.spec.whatwg.org/multipage/scripting.html#valid-custom-element-name";
+		return 'The supplied element name is reserved and can\'t be used.\nSee: https://html.spec.whatwg.org/multipage/scripting.html#valid-custom-element-name';
 	}
 }
 
@@ -90,6 +90,6 @@ export default function validateElementName(name) {
 
 	return {
 		isValid: !errorMessage,
-		message: errorMessage || hasWarning(name),
+		message: errorMessage || hasWarning(name)
 	};
 }
